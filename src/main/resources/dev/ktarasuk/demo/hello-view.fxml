@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="560.0" maxWidth="720.0" minHeight="560.0" minWidth="720.0" prefHeight="560.0" prefWidth="720.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.ktarasuk.demo.HelloController">
+   <Label fx:id="welcomeText" text="Label" />
+    <Button fx:id="btnExit" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Button" />
+</VBox>
