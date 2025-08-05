@@ -6,14 +6,13 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.logging.Logger;
 
 public class HelloApplication extends Application {
 
@@ -28,20 +27,25 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         StackPane root = new StackPane();
 
-        Button btn = new Button();
-        StackPane.setMargin(btn, new Insets(0,0,500,680));
-        btn.setText("X");
-        btn.setPadding(new Insets(10,10,10,10));
-        btn.setStyle(   "-fx-background-color: red;\n" +
+        Label label = new Label();
+        label.setText("JavaFX App");
+        label.setStyle( "-fx-text-fill: #FFFFFF;\n" +
+                        "-fx-font-size: 64;");
+
+        Button btnExit = new Button();
+        StackPane.setMargin(btnExit, new Insets(0,0,500,680));
+        btnExit.setText("X");
+        btnExit.setPadding(new Insets(10,10,10,10));
+        btnExit.setStyle(   "-fx-background-color: red;\n" +
                         "-fx-text-fill: #FFFFFF;");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        btnExit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 stage.close();
             }
         });
 
-        root.getChildren().add(btn);
+        root.getChildren().addAll(btnExit, btn, label);
 
         root.setStyle(  "-fx-background-color: rgb(45, 45, 50), rgb(60, 60, 65);\n" +
                         "-fx-background-insets: 0, 0 1 1 0;\n" +

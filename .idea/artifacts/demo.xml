@@ -16,9 +16,7 @@
       </options>
     </properties>
     <root id="root">
-      <element id="archive" name="demo.jar">
-        <element id="module-output" name="demo" />
-      </element>
+      <element id="archive" name="demo.jar" />
     </root>
   </artifact>
 </component>
