@@ -45,7 +45,7 @@ public class HelloApplication extends Application {
             }
         });
 
-        root.getChildren().addAll(btnExit, btn, label);
+        root.getChildren().addAll(btnExit, label);
 
         root.setStyle(  "-fx-background-color: rgb(45, 45, 50), rgb(60, 60, 65);\n" +
                         "-fx-background-insets: 0, 0 1 1 0;\n" +
